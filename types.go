@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/yeticloud/airboss"
+	"github.com/neutriino/libatc"
 )
 
 // ProcessOptions allows for passing process options to NewProcess
@@ -27,7 +27,7 @@ type ProcessInfo struct {
 	Config       map[string]interface{}
 	Token        string
 	Handler      interface{}
-	CMD          *airboss.Subprocess
+	CMD          *libatc.Subprocess
 	Options      ProcessOptions
 	Running      bool
 	Terminate    chan bool

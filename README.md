@@ -1,5 +1,5 @@
-# libsubrpc
-libsubrpc provides subprocess management and RPC communication in a single package
+# subprocess-rpc
+subprocess-rpc provides subprocess management and RPC communication in a single package
 
 ## Purpose
 The purpose is to provide a framework for allowing a plugin/dll-style system for Go given its lack of plugin or dynamic symbol loading. 

@@ -11,7 +11,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/google/uuid"
-	"github.com/yeticloud/airboss"
+	"github.com/neutriino/libatc"
 )
 
 // Manager type instantiates a new Manager instance
@@ -24,7 +24,7 @@ type Manager struct {
 	Errors       chan error
 	Metrics      chan Metrics
 	RPC          *rpc.Server
-	mgr          *airboss.ProcessManager
+	mgr          *libatc.ProcessManager
 }
 
 // Metrics type
@@ -45,7 +45,7 @@ func NewManager() (*Manager, error) {
 		Errors:       make(chan error, 64),
 		Metrics:      make(chan Metrics, 1024),
 		RPC:          rpc.NewServer(),
-		mgr:          airboss.NewProcessManager(),
+		mgr:          libatc.NewProcessManager(),
 	}
 	conn, err := net.Listen("unix", m.ServerSocket)
 	if err != nil {
